@@ -1,17 +1,18 @@
 // Todo.js === Student.js Hogwarts example
+// <Todo /> is a component that takes in the todo data and displays the task to the screen.
 // pretty much adding style... each task is bold
 
-
-import React from 'react';
+import React from "react";
 
 const Todo = props => {
-    return (
-        <div className="todo-info">
-            <p><strong>{props.todoProp.task}</strong></p>
-        </div>
-    )
-}
-
+  return (
+    <div>
+      <p>
+        <strong>{props.todoProp.task}</strong>
+      </p>
+    </div>
+  );
+};
 
 export default Todo;
 

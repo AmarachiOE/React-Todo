@@ -1,34 +1,33 @@
 // App.js === HogwartsStudents.js Hogwarts example
+// not map function though... that's one todolist.js
+// design `App` to be the parent component of your application.
+// this component is going to take care of state (all data), and any change handlers you need to work with your state
 
-import React from 'react';
+import React from "react";
 
 // import js files
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
 
-
- // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
-
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      //state is an object
       todosArray: [
         {
-          task: 'Organize Garage',
+          task: "Organize Garage",
           id: 1528817077286,
           completed: false
         },
-      
+
         {
-          task: 'Bake Cookies',
+          task: "Bake Cookies",
           id: 1528817084358,
           completed: false
         }
       ],
-      todo: "",
+      todo: ""
     };
   }
 
@@ -41,12 +40,11 @@ class App extends React.Component {
   // event.preventDefault(); needed for buttons!
 
   handleChanges = event => {
-    console.log('event: ', event.target);
+    console.log("event: ", event.target);
     this.setState({
       [event.target.name]: event.target.value
     });
   };
- 
 
   updateList = event => {
     event.preventDefault(); // no refreshing page
@@ -67,15 +65,12 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList 
-          todosArray={this.state.todosArray}
-        />
-        <TodoForm 
+        <TodoList todosArray={this.state.todosArray} />
+        <TodoForm
           todo={this.state.todo}
           handleChanges={this.handleChanges}
           updateList={this.updateList}
         />
-        
       </div>
     );
   }
