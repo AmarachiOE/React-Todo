@@ -33,11 +33,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h2>Welcome to your Todo App!</h2>
         <TodoList 
           todosArray={this.state.todosArray}
         />
-        <TodoForm />
-        <h2>Welcome to your Todo App!</h2>
+        <TodoForm 
+          todo={this.state.todo}
+        />
+        
       </div>
     );
   }

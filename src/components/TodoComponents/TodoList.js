@@ -12,7 +12,9 @@ import Todo from "./Todo";
 const TodoList = props => {
   return (
     <div>
-      {/*  map over each item in todoListItems (which is set to todoArray in App.js */}
+      {/*  map over each item in todosArray (which is created under state in App.js 
+        todosArray is passed down to TodoList as a prop here
+    */}
       {props.todosArray.map(todo => (
         <Todo 
             key={todo.id} 

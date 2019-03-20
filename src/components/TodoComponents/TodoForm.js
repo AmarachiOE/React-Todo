@@ -5,8 +5,8 @@ const TodoForm = props => {
     return (
         <form>
             <input 
-                type="text"
                 name="todo"
+                value={props.todo}
                 placeholder="Next thing todo..."
             />
             <button>Add Todo Item</button>
