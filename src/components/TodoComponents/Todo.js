@@ -1,4 +1,6 @@
 // Todo.js === Student.js Hogwarts example
+// pretty much adding style... each task is bold
+
 
 import React from 'react';
 

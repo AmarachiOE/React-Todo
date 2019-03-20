@@ -27,6 +27,18 @@ class App extends React.Component {
       todo: "",
     };
   }
+
+   // this function updates the name prop on state
+  // this fx is passed to <input> on studentform for onchange attr (step 3)
+  handleChanges = event => {
+    console.log('event: ', event.target);
+    this.setState({
+      // change the value of the name prop
+      // passing in each key stroke to the name prop on state
+      // [event.target.name] will reference "todo" or other added state property
+      [event.target.name]: event.target.value
+    });
+  };
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
