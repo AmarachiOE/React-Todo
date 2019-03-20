@@ -7,6 +7,10 @@ import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
 
 
+ // you will need a place to store your state in this component.
+  // design `App` to be the parent component of your application.
+  // this component is going to take care of state, and any change handlers you need to work with your state
+
 class App extends React.Component {
   constructor() {
     super();
@@ -28,20 +32,37 @@ class App extends React.Component {
     };
   }
 
-   // this function updates the name prop on state
-  // this fx is passed to <input> on studentform for onchange attr (step 3)
+  // Step Description:
+  // handleChanges function updates the todo prop on state (or other prop on state that has empty string and bound to input field on TodoForm)
+  // this fx is passed to <input> on TodoForm for onchange attr (  onChange={props.handleChanges}  )
+  // this.setState changes the value of the todo prop (currently an empty string)
+  // passes in each key stroke to the todo prop on state
+  // [event.target.name] will reference "todo" or other added state property
+  // event.preventDefault(); needed for buttons!
+
   handleChanges = event => {
     console.log('event: ', event.target);
     this.setState({
-      // change the value of the name prop
-      // passing in each key stroke to the name prop on state
-      // [event.target.name] will reference "todo" or other added state property
       [event.target.name]: event.target.value
     });
   };
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+ 
+
+  updateList = event => {
+    event.preventDefault(); // no refreshing page
+
+    const newTodo = {
+      task: this.state.todo,
+      id: Date.now(),
+      completed: false
+    };
+
+    this.setState({
+      todosArray: [...this.state.todosArray, newTodo]
+    });
+  };
+
+  // REMEMBER: if a prop is declared in a child, it needs to be declared here, too ( anything in child that is prop.something here needs to be something={} )!!!!
   render() {
     return (
       <div>
@@ -52,6 +73,7 @@ class App extends React.Component {
         <TodoForm 
           todo={this.state.todo}
           handleChanges={this.handleChanges}
+          updateList={this.updateList}
         />
         
       </div>
