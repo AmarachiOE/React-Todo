@@ -51,6 +51,7 @@ class App extends React.Component {
         />
         <TodoForm 
           todo={this.state.todo}
+          handleChanges={this.handleChanges}
         />
         
       </div>
