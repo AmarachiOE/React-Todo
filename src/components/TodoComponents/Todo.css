@@ -64,16 +64,18 @@
 .item { 
     font-size: 1.2rem;
     width: 35%;
-    height: auto;
-    padding: 5px;
-    margin: 20px;
+    height: 40px;
+    /* padding: 2px; */
+    margin: 15px;
     background: #E4D9FF;
     color: rgb(8, 8, 109);
     border: 3px solid #FF1053;
     border-radius: 20px;
-    text-align: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .item:hover {
     background: #FF1053;
