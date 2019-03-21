@@ -12,7 +12,7 @@ import Todo from "./Todo";
 
 const TodoList = props => {
   return (
-    <div>
+    <div className="todolist-container">
       {/*  map over each item in todosArray (which is created under state in App.js 
         todosArray is passed down to TodoList as a prop here
     */}

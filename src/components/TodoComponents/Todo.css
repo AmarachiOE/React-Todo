@@ -1,9 +1,50 @@
-.item {
-    font-size: 1.5rem;
-    color: palevioletred;
+.app {
+    margin: 40px auto 0;
+    width: 75%;
+    min-height: 500px;
+    background: #48392A;
+}
+
+.app h2 {
+    color: #FBF2C0;
+    padding: 50px 0 20px;
+    text-align: center;
+}
+
+.todoform-container {
+    background: yellow;
+    height: 80px;
+}
+
+.todolist-container {
+    background: white;
+    border-radius: 20px;
+    margin: 0 5% 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* nested in todolist-container ultimately... these are flex items */
+.item { 
+    font-size: 1.2rem;
+    width: 40%;
+    height: auto;
+    padding: 5px;
+    margin: 20px;
+    color: #FBF2C0;
+    background: rgb(8, 8, 109);
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.item:hover {
+    background: #840032;
 }
 
 .item.completed {
-    color: black;
+    color: #E59500;
+    background: #840032;
     text-decoration: line-through;
 }

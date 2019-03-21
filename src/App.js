@@ -6,6 +6,7 @@
 import React from "react";
 
 // import js files
+import "./components/TodoComponents/Todo.css"; // css file
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
 
@@ -82,7 +83,7 @@ class App extends React.Component {
     });
 
     this.setState({ todosArray: remainingTodos });
-  }
+  };
 
 /*
   NOTES FROM CLASS:
@@ -108,8 +109,8 @@ class App extends React.Component {
   // REMEMBER: if a prop is declared in a child, it needs to be declared here, too ( anything in child that is prop.something here needs to be something={} )!!!!
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="app">
+        <h2>What You Have To Do Today:</h2>
         <TodoList 
           todosArray={this.state.todosArray} 
           toggleItem={this.toggleItem} 
