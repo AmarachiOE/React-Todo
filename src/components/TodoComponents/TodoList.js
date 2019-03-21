@@ -3,6 +3,7 @@
 // Invoke map function in this file
 
 import React from "react";
+import "./Todo.css";
 
 // import needed js files
 // need to be invoked in TodoList constructor fx

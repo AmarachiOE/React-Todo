@@ -3,6 +3,7 @@
 // pretty much adding style... each task is bold
 
 import React from "react";
+import "./Todo.css";
 
 const Todo = props => {
   return (

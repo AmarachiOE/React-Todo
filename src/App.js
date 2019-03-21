@@ -56,7 +56,7 @@ class App extends React.Component {
     };
 
     this.setState({
-      todosArray: [...this.state.todosArray, newTodo]
+      todosArray: [...this.state.todosArray, newTodo] // spread operator creates a copy of the array
     });
   };
 
