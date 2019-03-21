@@ -74,6 +74,37 @@ class App extends React.Component {
     });
   };
 
+  clearCompleted = event => {
+    event.preventDefault();
+
+    const remainingTodos = this.state.todosArray.filter( item => {
+      return item.completed === false;
+    });
+
+    this.setState({ todosArray: remainingTodos });
+  }
+
+/*
+  NOTES FROM CLASS:
+
+  clearPurchased = item => {
+    item.preventDefault;
+    //e.preventDefault();
+    // use filter method
+    // iterate over items inside this.state.groceries
+    // filter out any items whose item.purchased === true
+    // set your state with your new filtered list
+    // use filter like map with anonymous function and return only item with purchase false
+    const remainingGroceries = this.state.groceries.filter(item => {
+      return item.purchased === false;
+    });
+
+    this.setState({ groceries: remainingGroceries });
+  };
+
+*/ 
+
+
   // REMEMBER: if a prop is declared in a child, it needs to be declared here, too ( anything in child that is prop.something here needs to be something={} )!!!!
   render() {
     return (
@@ -87,6 +118,7 @@ class App extends React.Component {
           todo={this.state.todo}
           handleChanges={this.handleChanges}
           updateList={this.updateList}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );
