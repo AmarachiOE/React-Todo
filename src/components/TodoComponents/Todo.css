@@ -2,7 +2,10 @@
     margin: 40px auto 0;
     width: 75%;
     min-height: 500px;
-    background: rgb(30, 30, 37);
+    /* background: rgb(30, 30, 37); */
+    /* background-image: linear-gradient(rgb(30, 30, 37) 50%, white); */
+    background: linear-gradient(110deg, rgb(30, 30, 37) 60%, #ffed4b 60%);
+    border-radius: 20px;
 }
 
 .app h2 {
