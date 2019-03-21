@@ -60,12 +60,29 @@ class App extends React.Component {
     });
   };
 
+  toggleItem = id => {
+    this.setState({
+      todosArray: this.state.todosArray.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        }
+        return item;
+      })
+    });
+  };
+
   // REMEMBER: if a prop is declared in a child, it needs to be declared here, too ( anything in child that is prop.something here needs to be something={} )!!!!
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todosArray={this.state.todosArray} />
+        <TodoList 
+          todosArray={this.state.todosArray} 
+          toggleItem={this.toggleItem} 
+        />
         <TodoForm
           todo={this.state.todo}
           handleChanges={this.handleChanges}
