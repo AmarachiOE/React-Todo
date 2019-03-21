@@ -10,6 +10,7 @@ const TodoForm = props => {
         value={props.todo}
         onChange={props.handleChanges}
         placeholder="Next thing todo..."
+        id="todoform-reset" //trying to clear the form after click... not working
       />
       <button onClick={props.updateList}>Add Item to Todo List</button>
       <button onClick={props.clearCompleted}>Clear Completed Items</button>
