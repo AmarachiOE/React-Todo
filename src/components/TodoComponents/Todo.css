@@ -1,0 +1,97 @@
+.app {
+    margin: 40px auto 0;
+    width: 75%;
+    min-height: 500px;
+    /* background: rgb(30, 30, 37); */
+    /* background-image: linear-gradient(rgb(30, 30, 37) 50%, white); */
+    background: linear-gradient(110deg, rgb(30, 30, 37) 60%, #ffed4b 60%);
+    border-radius: 20px;
+    box-shadow: 3px 5px black;
+}
+
+.app h2 {
+    color: white;
+    padding: 50px 0 20px;
+    text-align: center;
+    font-size: 2.3rem;
+    font-family: sans-serif;
+    font-weight: 1;
+}
+
+.todoform-container {
+    /* background: yellow; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todoform-container input{
+    margin: 20px 0;
+    font-size: 1rem;
+    width: 280px;
+    height: 20px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #FF1053;
+    color: white;
+
+} 
+
+.todoform-container button {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid rgb(8, 8, 109);
+    color: #FF1053;
+    background: white;
+    box-shadow: 1px 1px black;
+}
+
+.todoform-container button:hover {
+    background: #FF1053;
+    color: white;
+}
+
+.todolist-container {
+    background: white;
+    /* border: 2px solid rgb(8, 8, 109); */
+    border-radius: 20px;
+    margin: 0 5% 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 4px 3px gray;
+}
+
+/* nested in todolist-container ultimately... these are flex items */
+.item { 
+    font-size: 1.2rem;
+    width: 35%;
+    height: 40px;
+    /* padding: 2px; */
+    margin: 15px;
+    background: #E4D9FF;
+    color: rgb(8, 8, 109);
+    border: 3px solid #FF1053;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item:hover {
+    background: #FF1053;
+    color: white;
+}
+
+.item.completed {
+    color: rgb(8, 8, 109);
+    background: #FF1053;
+    text-decoration: line-through;
+}
